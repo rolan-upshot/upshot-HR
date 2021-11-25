@@ -7,8 +7,8 @@ import{ LoginService } from '../login.service';
   styleUrls: ['./upshot-login.component.scss']
 })
 export class UpshotLoginComponent implements OnInit {
-  @Input() email: string | undefined;
-  @Input() password:string | undefined;
+  @Input() email: string= "";
+  @Input() password:string = "";
   constructor(private loginservice:LoginService ) {
   }
 
@@ -18,7 +18,7 @@ export class UpshotLoginComponent implements OnInit {
   login(): void{
     console.log("email:");
     console.log("password:");
-    this.loginservice.login();
+    this.loginservice.login(this.email, this.password);
 
 
   }

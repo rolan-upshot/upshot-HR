@@ -9,9 +9,13 @@ export class LoginService {
 
   constructor( private httpClient:HttpClient) { }
 
-  login():void {
+  login( email: string, password:string):void {
     var url:string = this.server + "/api/test-login";
-    this.httpClient.get(url).subscribe(data=>{
+    var data ={
+      "email": email,
+      "password": password
+    }
+    this.httpClient.post(url , data).subscribe(data=>{
       console.log(data);
     });
 
