@@ -6,12 +6,18 @@ import { AppComponent } from './app.component';
 import { NavHeaderComponent } from './nav-header/nav-header.component';
 import { UpshotLoginComponent } from './upshot-login/upshot-login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BarComponent } from './bar/bar.component';
+import { PieComponent } from './pie/pie.component';
+import { ScatterComponent } from './scatter/scatter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavHeaderComponent,
-    UpshotLoginComponent
+    UpshotLoginComponent,
+    BarComponent,
+    PieComponent,
+    ScatterComponent
   ],
   imports: [
     BrowserModule,
